@@ -1,0 +1,407 @@
+/* Custom styles for Koperasi Sekolah */
+
+.cooperative-theme {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 50%, #17a2b8 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+/* Cooperative Logo Styling */
+.cooperative-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.cooperative-logo:hover {
+    transform: scale(1.05);
+}
+
+/* Cooperative Badge */
+.cooperative-badge {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin-top: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.cooperative-badge .badge-text {
+    color: #fff;
+    font-weight: 600;
+    margin-left: 8px;
+    font-size: 0.9em;
+}
+
+/* Slogan styling */
+.slogan {
+    font-style: italic;
+    opacity: 0.9;
+    font-size: 1.1em;
+}
+
+/* Cooperative elements container */
+.cooperative-elements {
+    margin-top: 15px;
+}
+
+/* Cooperative features */
+.cooperative-features {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 5px 12px;
+    font-size: 0.85em;
+    font-weight: 500;
+    color: #fff;
+    backdrop-filter: blur(5px);
+}
+
+.feature-item i {
+    margin-right: 5px;
+}
+
+/* Responsive adjustments for cooperative features */
+@media (max-width: 576px) {
+    .cooperative-features {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .feature-item {
+        font-size: 0.8em;
+        padding: 4px 10px;
+    }
+
+    .cooperative-logo {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+.shadow-lg-custom {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+}
+
+.card-gradient {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+}
+
+.table-nasabah th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    border-top: none;
+}
+
+.table-nasabah .col-no { width: 5%; }
+.table-nasabah .col-nik { width: 15%; }
+.table-nasabah .col-nama { width: 20%; }
+.table-nasabah .col-nip { width: 15%; }
+.table-nasabah .col-telp { width: 15%; }
+.table-nasabah .col-saldo { width: 15%; }
+.table-nasabah .col-aksi { width: 15%; }
+
+.btn-custom {
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.small-box-custom {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.chart-container {
+    position: relative;
+    height: 300px;
+}
+
+@media (max-width: 768px) {
+    .table-nasabah .col-nik,
+    .table-nasabah .col-nip,
+    .table-nasabah .col-telp {
+        display: none;
+    }
+
+    .table-nasabah .col-nama {
+        width: 40%;
+    }
+
+    .table-nasabah .col-saldo,
+    .table-nasabah .col-aksi {
+        width: 30%;
+    }
+}
+
+/* Loading animation */
+.loading {
+    position: relative;
+}
+
+.loading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Fixed header and footer handled by AdminLTE classes layout-navbar-fixed and layout-footer-fixed */
+
+.content-wrapper {
+    padding-top: 20px; /* Adjusted from 60px to move dashboard text upwards */
+    padding-bottom: 60px; /* Adjust based on footer height */
+}
+
+/* Fixed footer styles */
+.main-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    padding: 10px 20px;
+}
+
+/* Login page two-column layout */
+.login-page-custom {
+    background: #f5f9fc;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+.login-container {
+    display: flex;
+    max-width: 1000px;
+    width: 100%;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+.login-left {
+    flex: 1;
+    background: #0a6e8c;
+    color: white;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.login-left .branding h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 20px;
+    line-height: 1.2;
+}
+
+.login-left .branding .subtitle {
+    font-size: 1rem;
+    margin-top: 10px;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* Vertical text on left side */
+.vertical-text {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%) rotate(-90deg);
+    transform-origin: left top;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #0a6e8c;
+    letter-spacing: 0.1em;
+    user-select: none;
+}
+
+/* Right side login form */
+.login-right {
+    flex: 1;
+    padding: 40px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    min-height: 500px; /* Ensure enough height for vertical centering */
+}
+
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin: auto; /* Center horizontally */
+}
+
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.login-card .login-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Override some bootstrap input styles */
+.login-form .form-control {
+    border-radius: 10px 0 0 10px;
+    border: 1px solid #ccc;
+    padding: 12px 15px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    outline: none;
+}
+
+.login-form .form-control:focus {
+    border-color: #0a6e8c;
+    box-shadow: 0 0 8px rgba(10, 110, 140, 0.3);
+    outline: none;
+}
+
+.login-form .input-group-text {
+    background: #0a6e8c;
+    border: none;
+    color: white;
+    border-radius: 0 10px 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 12px;
+    font-size: 1.2rem;
+    height: 100%;
+    line-height: 1;
+}
+
+.login-form .input-group-text {
+    background: #0a6e8c;
+    border: none;
+    color: white;
+    border-radius: 0 10px 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 12px;
+    font-size: 1.2rem;
+}
+
+.login-form .input-group {
+    display: flex;
+}
+
+.login-form .input-group .form-control {
+    flex: 1 1 auto;
+    width: 1%;
+    margin-bottom: 0;
+}
+
+.btn-primary {
+    background: #0a6e8c;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 45px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: #095a6a;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+        max-width: 90%;
+    }
+    .login-left,
+    .login-right {
+        padding: 20px;
+    }
+    .vertical-text {
+        display: none;
+    }
+}
